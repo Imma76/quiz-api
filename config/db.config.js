@@ -8,7 +8,7 @@ const database = () => {
     mongoose_1.default.connect(`${process.env.MONGODB_URI}`).then(val => {
         console.log('database connected');
     }).catch(err => {
-        console.log(`$err`);
+        console.log(`${err}`);
     });
 };
 exports.default = database;
