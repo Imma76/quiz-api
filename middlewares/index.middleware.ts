@@ -1,5 +1,8 @@
+import express from 'express';
 
-const middleware = (app:Express.Application) => {
+const middleware = (app:express.Application) => {
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
     
 }
 
