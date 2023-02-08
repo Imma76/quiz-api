@@ -6,8 +6,8 @@ class QuizController{
 
 
     async postMaths(req: Request, res: Response) {
-        
-        const postReq = await quizService.postQuiz({ question: req.body.questions, answers: req.body.answers })
+        console.log(req.body.answers); 
+        const postReq = await quizService.postQuiz({ question: req.body.question, answers: { "a":req.body.answers[0],"b":req.body.answers[1], }, correct_answer:req.body.answers[1] , })
         return res.status(201).send({ status: true, message: "question addded succcessfully" });
     }
 }

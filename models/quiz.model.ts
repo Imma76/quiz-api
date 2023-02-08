@@ -6,8 +6,13 @@ const mathsSchema = new mongoose.Schema({
 
     },
 
-    anwsers: {
-        type:JSON,
+    answers: {
+        type:Object,
+    },
+
+    correct_answer:{
+
+        type:String
     }
 },);
 

@@ -8,8 +8,11 @@ const mathsSchema = new mongoose_1.default.Schema({
     question: {
         type: String,
     },
-    anwsers: {
-        type: JSON,
+    answers: {
+        type: Object,
+    },
+    correct_answer: {
+        type: String
     }
 });
 const Quiz = mongoose_1.default.model('Maths', mathsSchema);

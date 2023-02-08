@@ -16,7 +16,8 @@ const quiz_services_js_1 = __importDefault(require("../services/quiz.services.js
 class QuizController {
     postMaths(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const postReq = yield quiz_services_js_1.default.postQuiz({ question: req.body.questions, answers: req.body.answers });
+            console.log(req.body.answers);
+            const postReq = yield quiz_services_js_1.default.postQuiz({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], });
             return res.status(201).send({ status: true, message: "question addded succcessfully" });
         });
     }
