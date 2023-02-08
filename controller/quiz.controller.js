@@ -8,10 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const quiz_services_js_1 = __importDefault(require("../services/quiz.services.js"));
 class QuizController {
     postMaths(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const postReq = yield quiz_services_js_1.default.postQuiz({ question: req.body.questions, answers: req.body.answers });
+            return res.status(201).send({ status: true, message: "question addded succcessfully" });
         });
     }
 }
