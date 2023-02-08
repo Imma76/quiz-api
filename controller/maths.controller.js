@@ -32,7 +32,7 @@ class QuizController {
     getMathsBeginnerQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const quiz = yield quiz_services_js_1.default.getBeginnerMathsQuiz();
-            return res.status(200).send({ status: true, message: quiz });
+            return res.status(200).send({ status: true, data: quiz });
         });
     }
 }
