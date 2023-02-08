@@ -12,18 +12,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const quiz_services_js_1 = __importDefault(require("../services/quiz.services.js"));
+const maths_services_js_1 = __importDefault(require("../services/maths.services.js"));
 class QuizController {
     postMaths(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body.answers);
-            const postReq = yield quiz_services_js_1.default.postMathsQuiz({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], level: 'professional' });
+            const postReq = yield maths_services_js_1.default.postMathsQuiz({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], level: 'professional' });
             return res.status(201).send({ status: true, message: "question addded succcessfully" });
         });
     }
     getMathsQuestions(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const allQuiz = yield quiz_services_js_1.default.getMathQuiz();
+            const allQuiz = yield maths_services_js_1.default.getMathQuiz();
             return res.status(200).send({
                 status: true, data: allQuiz
             });
@@ -31,13 +31,13 @@ class QuizController {
     }
     getMathsBeginnerQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const quiz = yield quiz_services_js_1.default.getBeginnerMathsQuiz();
+            const quiz = yield maths_services_js_1.default.getBeginnerMathsQuiz();
             return res.status(200).send({ status: true, data: quiz });
         });
     }
     getMathsProfessionalQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const quiz = yield quiz_services_js_1.default.getProfessionalMathsQuiz();
+            const quiz = yield maths_services_js_1.default.getProfessionalMathsQuiz();
             return res.status(200).send({ status: true, data: quiz });
         });
     }

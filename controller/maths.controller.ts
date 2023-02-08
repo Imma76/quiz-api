@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import quizService from '../services/quiz.services.js';
+import quizService from '../services/maths.services.js';
 
 
 class QuizController{
