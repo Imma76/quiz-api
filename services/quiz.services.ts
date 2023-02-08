@@ -21,6 +21,13 @@ class QuizService{
         return quiz;
     }
 
+    async getProfessionalMathsQuiz(){
+
+        const quiz =await  MathsQuiz.find({level:'professional'});
+
+        return quiz;
+    }
+
 }
 
 

@@ -7,6 +7,7 @@ const mathsRouter = express.Router();
 mathsRouter.post('/', mathsController.postMaths)
 mathsRouter.get('/', mathsController.getMathsQuestions);
 mathsRouter.get('/beginner', mathsController.getMathsBeginnerQuestion);
+mathsRouter.get('/professional', mathsController.getMathsProfessionalQuestion);
 
 
 export default mathsRouter;

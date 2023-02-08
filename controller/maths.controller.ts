@@ -25,6 +25,12 @@ class QuizController{
         const quiz = await quizService.getBeginnerMathsQuiz();
         return res.status(200).send({status:true, data:quiz})
     }
+
+    async getMathsProfessionalQuestion(req: Request, res:Response){
+
+        const quiz = await quizService.getProfessionalMathsQuiz();
+        return res.status(200).send({status:true, data:quiz})
+    }
 }
 
 export default new QuizController();

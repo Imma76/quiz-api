@@ -9,4 +9,5 @@ const mathsRouter = express_1.default.Router();
 mathsRouter.post('/', maths_controller_1.default.postMaths);
 mathsRouter.get('/', maths_controller_1.default.getMathsQuestions);
 mathsRouter.get('/beginner', maths_controller_1.default.getMathsBeginnerQuestion);
+mathsRouter.get('/professional', maths_controller_1.default.getMathsProfessionalQuestion);
 exports.default = mathsRouter;
