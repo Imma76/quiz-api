@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const quizSchema = new mongoose.Schema({
+const mathsSchema = new mongoose.Schema({
     question: {
         type: String,
 
@@ -12,7 +12,7 @@ const quizSchema = new mongoose.Schema({
 },);
 
 
-const Quiz = mongoose.model('quiz', quizSchema);
+const Quiz = mongoose.model('Maths', mathsSchema);
 
 export default Quiz;
 

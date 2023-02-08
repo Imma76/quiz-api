@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const quizSchema = new mongoose_1.default.Schema({
+const mathsSchema = new mongoose_1.default.Schema({
     question: {
         type: String,
     },
@@ -12,5 +12,5 @@ const quizSchema = new mongoose_1.default.Schema({
         type: JSON,
     }
 });
-const Quiz = mongoose_1.default.model('quiz', quizSchema);
+const Quiz = mongoose_1.default.model('Maths', mathsSchema);
 exports.default = Quiz;
