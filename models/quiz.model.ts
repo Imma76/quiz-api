@@ -13,6 +13,10 @@ const mathsSchema = new mongoose.Schema({
     correct_answer:{
 
         type:String
+    },
+    level:{
+
+        type:String
     }
 },);
 

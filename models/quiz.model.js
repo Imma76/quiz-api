@@ -13,6 +13,9 @@ const mathsSchema = new mongoose_1.default.Schema({
     },
     correct_answer: {
         type: String
+    },
+    level: {
+        type: St
     }
 });
 const Quiz = mongoose_1.default.model('Maths', mathsSchema);
