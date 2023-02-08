@@ -19,4 +19,4 @@ const physicsSchema = new mongoose_1.default.Schema({
     }
 });
 const PhysicsQuiz = mongoose_1.default.model('Physics', physicsSchema);
-exports.default = PhysisQuiz;
+exports.default = PhysicsQuiz;
