@@ -15,7 +15,7 @@ const mathsSchema = new mongoose_1.default.Schema({
         type: String
     },
     level: {
-        type: St
+        type: String
     }
 });
 const Quiz = mongoose_1.default.model('Maths', mathsSchema);
