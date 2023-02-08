@@ -17,8 +17,16 @@ class QuizController {
     postMaths(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body.answers);
-            const postReq = yield quiz_services_js_1.default.postQuiz({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], level: 'professional' });
+            const postReq = yield quiz_services_js_1.default.postMathsQuiz({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], level: 'professional' });
             return res.status(201).send({ status: true, message: "question addded succcessfully" });
+        });
+    }
+    getMathsQuestions(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const allQuiz = yield quiz_services_js_1.default.getMathQuiz();
+            return res.status(200).send({
+                status: true, data: allQuiz
+            });
         });
     }
 }

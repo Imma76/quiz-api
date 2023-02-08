@@ -14,10 +14,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const quiz_model_js_1 = __importDefault(require("../models/quiz.model.js"));
 class QuizService {
-    postQuiz(quiz) {
+    postMathsQuiz(quiz) {
         return __awaiter(this, void 0, void 0, function* () {
             const post = yield quiz_model_js_1.default.create(quiz);
             return post;
+        });
+    }
+    getMathQuiz() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const allQuiz = yield quiz_model_js_1.default.find();
+            return allQuiz;
         });
     }
 }

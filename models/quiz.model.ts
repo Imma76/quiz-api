@@ -21,7 +21,7 @@ const mathsSchema = new mongoose.Schema({
 },);
 
 
-const Quiz = mongoose.model('Maths', mathsSchema);
+const MathsQuiz = mongoose.model('Maths', mathsSchema);
 
-export default Quiz;
+export default MathsQuiz;
 

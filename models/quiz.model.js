@@ -18,5 +18,5 @@ const mathsSchema = new mongoose_1.default.Schema({
         type: String
     }
 });
-const Quiz = mongoose_1.default.model('Maths', mathsSchema);
-exports.default = Quiz;
+const MathsQuiz = mongoose_1.default.model('Maths', mathsSchema);
+exports.default = MathsQuiz;

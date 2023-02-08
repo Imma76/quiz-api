@@ -1,11 +1,17 @@
-import Quiz from "../models/quiz.model.js";
+import MathsQuiz from "../models/quiz.model.js";
 
 
 class QuizService{
 
-    async postQuiz(quiz: {question:string, answers:Object, correct_answer:string, level:string}) {
-        const post = await Quiz.create(quiz);
+    async postMathsQuiz(quiz: {question:string, answers:Object, correct_answer:string, level:string}) {
+        const post = await MathsQuiz.create(quiz);
         return post;
+    }
+
+    async getMathQuiz(){
+
+        const allQuiz = await MathsQuiz.find();
+        return allQuiz;
     }
 
 }

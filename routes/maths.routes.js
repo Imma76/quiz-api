@@ -7,4 +7,5 @@ const express_1 = __importDefault(require("express"));
 const maths_controller_1 = __importDefault(require("../controller/maths.controller"));
 const mathsRouter = express_1.default.Router();
 mathsRouter.post('/', maths_controller_1.default.postMaths);
+mathsRouter.get('/', maths_controller_1.default.getMathsQuestions);
 exports.default = mathsRouter;
