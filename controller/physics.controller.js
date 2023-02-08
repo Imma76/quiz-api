@@ -21,3 +21,4 @@ class PhysicsController {
         });
     }
 }
+exports.default = new PhysicsController();

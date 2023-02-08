@@ -9,3 +9,5 @@ class PhysicsController{
         return res.status(201).send({ status: true, message: "question addded succcessfully" });
     }
 }
+
+export default new PhysicsController();

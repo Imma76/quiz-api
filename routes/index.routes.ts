@@ -6,6 +6,6 @@ const indexRouter = express.Router();
 
 
 indexRouter.use('/maths', mathsRouter);
-
+indexRouter.use('/physics', mathsRouter);
 
 export default indexRouter;
