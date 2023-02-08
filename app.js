@@ -9,6 +9,6 @@ const index_middleware_js_1 = __importDefault(require("./middlewares/index.middl
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 (0, index_middleware_js_1.default)(app);
-app.listen(2020, () => {
-    console.log('app is up  and running on 2020');
+app.listen(2021, () => {
+    console.log('app is up  and running on 2021');
 });

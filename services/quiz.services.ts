@@ -14,6 +14,13 @@ class QuizService{
         return allQuiz;
     }
 
+    async getBeginnerMathsQuiz(){
+
+        const quiz =await  MathsQuiz.find({level:'beginner'});
+
+        return quiz;
+    }
+
 }
 
 

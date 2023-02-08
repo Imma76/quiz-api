@@ -19,6 +19,12 @@ class QuizController{
         });
 
     }
+
+    async getMathsBeginnerQuestion(req:Request, res:Response){
+
+        const quiz = await quizService.getBeginnerMathsQuiz();
+        return res.status(200).send({status:true, message:quiz})
+    }
 }
 
 export default new QuizController();

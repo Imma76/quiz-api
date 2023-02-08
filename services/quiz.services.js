@@ -26,5 +26,11 @@ class QuizService {
             return allQuiz;
         });
     }
+    getBeginnerMathsQuiz() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const quiz = yield quiz_model_js_1.default.find({ level: 'beginner' });
+            return quiz;
+        });
+    }
 }
 exports.default = new QuizService();

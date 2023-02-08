@@ -7,6 +7,6 @@ dotenv.config();
 const app = express();
 
 middleware(app)
-app.listen(2020, () => {
-    console.log('app is up  and running on 2020');
+app.listen(2021, () => {
+    console.log('app is up  and running on 2021');
 })
