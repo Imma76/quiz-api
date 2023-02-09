@@ -16,8 +16,28 @@ const physics_services_1 = __importDefault(require("../services/physics.services
 class PhysicsController {
     createPhysicsQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const quiz = yield physics_services_1.default.createQuestion({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], level: 'beginner' });
+            const quiz = yield physics_services_1.default.createQuestion({ question: req.body.question, answers: { "a": req.body.answers[0], "b": req.body.answers[1], }, correct_answer: req.body.answers[1], level: 'professional' });
             return res.status(201).send({ status: true, message: "question addded succcessfully" });
+        });
+    }
+    getPhyscsQuestions(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const allQuiz = yield physics_services_1.default.getPhysicsQuiz();
+            return res.status(200).send({
+                status: true, data: allQuiz
+            });
+        });
+    }
+    getPhysicsBeginnerQuestion(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const quiz = yield physics_services_1.default.getBeginnerPhysicsQuiz();
+            return res.status(200).send({ status: true, data: quiz });
+        });
+    }
+    getPhysicsProfessionalQuestion(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const quiz = yield physics_services_1.default.getProfessionalPhysicsQuiz();
+            return res.status(200).send({ status: true, data: quiz });
         });
     }
 }

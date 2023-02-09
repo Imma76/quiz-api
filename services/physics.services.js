@@ -20,5 +20,23 @@ class PhysicsService {
             return quiz;
         });
     }
+    getPhysicsQuiz() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const allQuiz = yield physics_model_1.default.find();
+            return allQuiz;
+        });
+    }
+    getBeginnerPhysicsQuiz() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const quiz = yield physics_model_1.default.find({ level: 'beginner' });
+            return quiz;
+        });
+    }
+    getProfessionalPhysicsQuiz() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const quiz = yield physics_model_1.default.find({ level: 'professional' });
+            return quiz;
+        });
+    }
 }
 exports.default = new PhysicsService();

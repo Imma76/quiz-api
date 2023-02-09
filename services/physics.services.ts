@@ -8,6 +8,25 @@ class PhysicsService{
 
         return quiz;
     }
+    async getPhysicsQuiz(){
+
+        const allQuiz = await PhysicsQuiz.find();
+        return allQuiz;
+    }
+
+    async getBeginnerPhysicsQuiz(){
+
+        const quiz =await  PhysicsQuiz.find({level:'beginner'});
+
+        return quiz;
+    }
+
+    async getProfessionalPhysicsQuiz(){
+
+        const quiz =await  PhysicsQuiz.find({level:'professional'});
+
+        return quiz;
+    }
 }
 
 export default new PhysicsService();
