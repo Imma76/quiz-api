@@ -15,7 +15,7 @@ class QuizController{
 
         const allQuiz = await quizService.getMathQuiz();
         return res.status(200).send({
-            status: true, data: allQuiz
+            status: true,count:allQuiz.length,  data: allQuiz
         });
 
     }
@@ -23,13 +23,13 @@ class QuizController{
     async getMathsBeginnerQuestion(req:Request, res:Response){
 
         const quiz = await quizService.getBeginnerMathsQuiz();
-        return res.status(200).send({status:true, data:quiz})
+        return res.status(200).send({status:true,count:quiz.length, data:quiz})
     }
 
     async getMathsProfessionalQuestion(req: Request, res:Response){
 
         const quiz = await quizService.getProfessionalMathsQuiz();
-        return res.status(200).send({status:true, data:quiz})
+        return res.status(200).send({status:true,count:quiz.length, data:quiz})
     }
 }
 

@@ -13,7 +13,7 @@ class PhysicsController{
 
         const allQuiz = await physicsServices.getPhysicsQuiz();
         return res.status(200).send({
-            status: true, data: allQuiz
+            status: true,count:allQuiz.length, data: allQuiz
         });
 
     }
@@ -21,13 +21,13 @@ class PhysicsController{
     async getPhysicsBeginnerQuestion(req:Request, res:Response){
 
         const quiz = await physicsServices.getBeginnerPhysicsQuiz();
-        return res.status(200).send({status:true, data:quiz})
+        return res.status(200).send({status:true,count:quiz.length, data:quiz})
     }
 
     async getPhysicsProfessionalQuestion(req: Request, res:Response){
 
         const quiz = await physicsServices.getProfessionalPhysicsQuiz();
-        return res.status(200).send({status:true, data:quiz})
+        return res.status(200).send({status:true,count:quiz.length,  data:quiz})
     }
 
 }

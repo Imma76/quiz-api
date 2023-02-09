@@ -25,20 +25,20 @@ class QuizController {
         return __awaiter(this, void 0, void 0, function* () {
             const allQuiz = yield maths_services_js_1.default.getMathQuiz();
             return res.status(200).send({
-                status: true, data: allQuiz
+                status: true, count: allQuiz.length, data: allQuiz
             });
         });
     }
     getMathsBeginnerQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const quiz = yield maths_services_js_1.default.getBeginnerMathsQuiz();
-            return res.status(200).send({ status: true, data: quiz });
+            return res.status(200).send({ status: true, count: quiz.length, data: quiz });
         });
     }
     getMathsProfessionalQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const quiz = yield maths_services_js_1.default.getProfessionalMathsQuiz();
-            return res.status(200).send({ status: true, data: quiz });
+            return res.status(200).send({ status: true, count: quiz.length, data: quiz });
         });
     }
 }

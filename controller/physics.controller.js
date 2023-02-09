@@ -24,20 +24,20 @@ class PhysicsController {
         return __awaiter(this, void 0, void 0, function* () {
             const allQuiz = yield physics_services_1.default.getPhysicsQuiz();
             return res.status(200).send({
-                status: true, data: allQuiz
+                status: true, count: allQuiz.length, data: allQuiz
             });
         });
     }
     getPhysicsBeginnerQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const quiz = yield physics_services_1.default.getBeginnerPhysicsQuiz();
-            return res.status(200).send({ status: true, data: quiz });
+            return res.status(200).send({ status: true, count: quiz.length, data: quiz });
         });
     }
     getPhysicsProfessionalQuestion(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const quiz = yield physics_services_1.default.getProfessionalPhysicsQuiz();
-            return res.status(200).send({ status: true, data: quiz });
+            return res.status(200).send({ status: true, count: quiz.length, data: quiz });
         });
     }
 }
